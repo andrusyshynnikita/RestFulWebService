@@ -30,6 +30,7 @@ namespace WebService.IOS.Views
                 _firstTimePresented = false;
 
                 ViewModel.ShowCurrentWeatherViewModelCommand.Execute(null);
+
                 ViewModel.ShowListOfCitiesViewModelCommand.Execute(null);
 
             }
