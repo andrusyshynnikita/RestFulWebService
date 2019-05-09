@@ -7,13 +7,13 @@ namespace RestFulWebService.Models
     public class CityModel
     {
         public int id { get; set; }
-        public Coord coord { get; set; }
+        //   public Coord coord { get; set; }
         public string country { get; set; }
-        public Geoname geoname { get; set; }
+        //  public Geoname geoname { get; set; }
         public string name { get; set; }
-        public Stat stat { get; set; }
-        public List<Station> stations { get; set; }
-        public int zoom { get; set; }
+        //  public Stat stat { get; set; }
+        //  public List<Station> stations { get; set; }
+        //  public int zoom { get; set; }
     }
 
 
@@ -35,5 +35,11 @@ namespace RestFulWebService.Models
         public int id { get; set; }
         public int dist { get; set; }
         public int kf { get; set; }
+    }
+
+    public class Coord
+    {
+        public double lon { get; set; }
+        public double lat { get; set; }
     }
 }

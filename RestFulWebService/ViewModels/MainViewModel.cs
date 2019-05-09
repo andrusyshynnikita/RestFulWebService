@@ -14,23 +14,14 @@ namespace RestFulWebService.ViewModels
     {
         public MainViewModel(IMvxNavigationService mvxNavigationService) : base(mvxNavigationService)
         {
-            ShowCurrentWeatherViewModelCommand = new MvxAsyncCommand(ShowCurrentWeatherViewModel);
-            ShowListOfCitiesViewModelCommand = new MvxAsyncCommand(ShowListOfCitiesViewModel);
+            ShowCurrentWeatherViewModelCommand = new MvxAsyncCommand(async () => await _mvxNavigationService.Navigate<CurrentWeatherViewModel>());
+            ShowListOfCitiesViewModelCommand = new MvxAsyncCommand(async () => await _mvxNavigationService.Navigate<ListOfCitiesViewModel>());
+            ShowMenuViewModelCommand = new MvxAsyncCommand(async () => await _mvxNavigationService.Navigate<MenuViewModel>());
         }
+
 
         public IMvxAsyncCommand ShowCurrentWeatherViewModelCommand { get; private set; }
-
-        private async Task ShowCurrentWeatherViewModel()
-        {
-            await _mvxNavigationService.Navigate<CurrentWeatherViewModel>();
-        }
-
         public IMvxAsyncCommand ShowListOfCitiesViewModelCommand { get; private set; }
-
-        private async Task ShowListOfCitiesViewModel()
-        {
-            await _mvxNavigationService.Navigate<ListOfCitiesViewModel>();
-        }
-
+        public IMvxAsyncCommand ShowMenuViewModelCommand { get; private set; }
     }
 }

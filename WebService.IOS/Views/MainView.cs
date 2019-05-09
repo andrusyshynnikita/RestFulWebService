@@ -12,7 +12,7 @@ using UIKit;
 namespace WebService.IOS.Views
 {
     [MvxRootPresentation]
-    public  class MainView: MvxViewController<MainViewModel>
+    public  class MainView: MvxTabBarViewController<MainViewModel>
     {
         private bool _firstTimePresented = true;
 

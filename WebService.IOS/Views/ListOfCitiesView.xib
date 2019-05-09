@@ -3,25 +3,32 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListOfCitiesView">
             <connections>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
                 <outlet property="ListOfCities" destination="207" id="name-outlet-207"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="1">
+        <view contentMode="scaleToFill" id="2">
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="207" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                    <rect key="frame" x="87" y="100" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="207" translatesAutoresizingMaskIntoConstraints="NO">
+                    <rect key="frame" x="41.5" y="73.5" width="331" height="589"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
+            <constraints>
+                <constraint id="758" firstItem="207" firstAttribute="centerX" secondItem="2" secondAttribute="centerX"/>
+                <constraint id="903" firstItem="207" firstAttribute="centerY" secondItem="2" secondAttribute="centerY"/>
+                <constraint id="907" firstItem="207" firstAttribute="width" secondItem="2" secondAttribute="width" multiplier="0.8"/>
+                <constraint id="908" firstItem="207" firstAttribute="height" secondItem="2" secondAttribute="height" multiplier="0.8"/>
+            </constraints>
         </view>
     </objects>
 </document>

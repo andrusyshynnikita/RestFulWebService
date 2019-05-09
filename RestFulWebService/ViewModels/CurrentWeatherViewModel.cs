@@ -9,6 +9,7 @@ namespace RestFulWebService.ViewModels
     
     public class CurrentWeatherViewModel : BaseViewModel
     {
+        #region Variables
         const string APIKey = "6606b02e3ce087d49d7135fd602953eb";
         private ILocationService _locationService;
         private double _latitude;
@@ -19,6 +20,7 @@ namespace RestFulWebService.ViewModels
         private string _weatherDescription;
         private Wind _currentWind;
         private int _currentHumidity;
+        #endregion
 
         public CurrentWeatherViewModel(ILocationService locationService)
         {
@@ -120,7 +122,7 @@ namespace RestFulWebService.ViewModels
                 _longitude = _locationService.GetLongitude();
                 var apiService = RestService.For<IAPIService>("https://api.openweathermap.org");
 
-                _currentWeather  = await apiService.GetCurrentWeather(_latitude,_longitude, APIKey);
+                _currentWeather  = await apiService.GetCurrentWeatherByCoordinates(_latitude,_longitude, APIKey);
                 if(_currentWeather!= null)
                 {
                     CityName = _currentWeather.name;

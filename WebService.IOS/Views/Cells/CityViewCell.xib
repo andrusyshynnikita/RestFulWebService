@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="cxk-wN-pdQ" customClass="CityViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="420" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="5" y="4.5" width="192" height="34.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="421" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="202" y="4.5" width="96" height="34.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint id="424" firstItem="420" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" multiplier="0.6"/>
+                    <constraint id="425" firstItem="420" firstAttribute="height" secondItem="YTl-1W-gDM" secondAttribute="height" multiplier="0.8"/>
+                    <constraint id="429" firstItem="420" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY"/>
+                    <constraint id="430" firstItem="420" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="5"/>
+                    <constraint id="433" firstItem="421" firstAttribute="leading" secondItem="420" secondAttribute="trailing" constant="5"/>
+                    <constraint id="434" firstItem="421" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" multiplier="0.3"/>
+                    <constraint id="435" firstItem="421" firstAttribute="height" secondItem="YTl-1W-gDM" secondAttribute="height" multiplier="0.8"/>
+                    <constraint id="436" firstItem="421" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="countre" destination="421" id="name-outlet-421"/>
+                <outlet property="CityName" destination="420" id="name-outlet-420"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
