@@ -19,14 +19,14 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="207" translatesAutoresizingMaskIntoConstraints="NO">
-                    <rect key="frame" x="41.5" y="73.5" width="331" height="589"/>
+                    <rect key="frame" x="10.5" y="73.5" width="393" height="589"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <constraints>
                 <constraint id="758" firstItem="207" firstAttribute="centerX" secondItem="2" secondAttribute="centerX"/>
                 <constraint id="903" firstItem="207" firstAttribute="centerY" secondItem="2" secondAttribute="centerY"/>
-                <constraint id="907" firstItem="207" firstAttribute="width" secondItem="2" secondAttribute="width" multiplier="0.8"/>
+                <constraint id="907" firstItem="207" firstAttribute="width" secondItem="2" secondAttribute="width" multiplier="0.95"/>
                 <constraint id="908" firstItem="207" firstAttribute="height" secondItem="2" secondAttribute="height" multiplier="0.8"/>
             </constraints>
         </view>

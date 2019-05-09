@@ -1,25 +1,21 @@
 using Foundation;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.Platforms.Ios.Presenters.Attributes;
 using MvvmCross.Platforms.Ios.Views;
-using Refit;
 using RestFulWebService.ViewModels;
 using System;
-using WebService.IOS.Services;
 
 namespace WebService.IOS
 {
-    [MvxTabPresentation(WrapInNavigationController = true, TabName = "Current Weather")]
-    public partial class CurrentWeatherView : MvxViewController<CurrentWeatherViewModel>
+    public partial class WeatherForCityView : MvxViewController<WeatherForCityViewModel>
     {
-        public CurrentWeatherView () : base (nameof(CurrentWeatherView), null)
+        public WeatherForCityView() : base(nameof(WeatherForCityView), null)
         {
         }
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            var set = this.CreateBindingSet<CurrentWeatherView, CurrentWeatherViewModel>();
+            var set = this.CreateBindingSet<WeatherForCityView, WeatherForCityViewModel>();
             set.Bind(CityName).To(vm => vm.CurrentWeater.name);
             set.Bind(WeatherDescription).To(vm => vm.CurrentWeater.weather[0].description);
             set.Bind(Temp).To(vm => vm.CurrentWeater.main.temp).WithConversion("TempToString");
@@ -28,6 +24,5 @@ namespace WebService.IOS
             set.Bind(Humidity).To(vm => vm.CurrentWeater.main.humidity).WithConversion("HumidityTOString");
             set.Apply();
         }
-
     }
 }

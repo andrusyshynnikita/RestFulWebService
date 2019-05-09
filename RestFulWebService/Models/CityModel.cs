@@ -7,13 +7,8 @@ namespace RestFulWebService.Models
     public class CityModel
     {
         public int id { get; set; }
-        //   public Coord coord { get; set; }
         public string country { get; set; }
-        //  public Geoname geoname { get; set; }
         public string name { get; set; }
-        //  public Stat stat { get; set; }
-        //  public List<Station> stations { get; set; }
-        //  public int zoom { get; set; }
     }
 
 

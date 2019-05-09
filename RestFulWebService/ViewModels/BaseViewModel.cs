@@ -7,7 +7,7 @@ using System.Text;
 
 namespace RestFulWebService.ViewModels
 {
-    public class BaseViewModel : MvxViewModel
+    public abstract class BaseViewModel : MvxViewModel
     {
         #region Variables
         private bool _isNetChecking;
@@ -61,8 +61,12 @@ namespace RestFulWebService.ViewModels
             }
         }
         #endregion
+    }
 
+    public abstract class BaseParameterViewModel<TParameter> : BaseViewModel, IMvxViewModel<TParameter>, IMvxViewModel
+    {
+        private TParameter _parameter;
 
-
+        public abstract void Prepare(TParameter parameter);
     }
 }

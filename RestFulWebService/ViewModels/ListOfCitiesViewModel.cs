@@ -1,4 +1,5 @@
 ﻿using MvvmCross.Commands;
+using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using Newtonsoft.Json;
 using RestFulWebService.Interfaces;
@@ -19,11 +20,11 @@ namespace RestFulWebService.ViewModels
         #endregion
 
         #region Constructors
-        public ListOfCitiesViewModel(IDatabaseService databaseService)
+        public ListOfCitiesViewModel(IMvxNavigationService mvxNavigationService,IDatabaseService databaseService) : base(mvxNavigationService)
         {
             _databaseService = databaseService.CreateDBConnection();
-            LoadMoreCitiesCommand = new MvxAsyncCommand(CitiesLazyLoad);
-            //CityClickCommand =   new MvxAsyncCommand<CityModel>();
+            LoadMoreCitiesCommand = new MvxCommand(CitiesLazyLoad);
+            CityClickCommand = new MvxAsyncCommand<CityModel>(OnCityClick);
         }
         #endregion
 
@@ -35,7 +36,7 @@ namespace RestFulWebService.ViewModels
         #endregion
 
         #region Commands
-        public IMvxAsyncCommand LoadMoreCitiesCommand { get; set; }
+        public IMvxCommand LoadMoreCitiesCommand { get; set; }
         public IMvxCommand<CityModel> CityClickCommand { get; set; }
         #endregion
 
@@ -59,11 +60,11 @@ namespace RestFulWebService.ViewModels
         #endregion
 
         #region Methods
-        private async Task CitiesLazyLoad()
+        private  void CitiesLazyLoad()
         {
             try
             {
-                var items = _databaseService.Query<CityModel>(String.Format("SELECT * FROM `CityModel` LIMIT {0}, 10", _coutCities));
+                var items =  _databaseService.Query<CityModel>(String.Format("SELECT * FROM `CityModel` LIMIT {0}, 10", _coutCities));
                 Cities.AddRange(items);
                 _coutCities += 10;
             }
@@ -71,6 +72,11 @@ namespace RestFulWebService.ViewModels
             {
                 Console.WriteLine(e.Message);
             }
+        }
+
+        private async Task OnCityClick(CityModel item)
+        {
+            await _mvxNavigationService.Navigate<WeatherForCityViewModel, CityModel>(item);
         }
         #endregion
     }

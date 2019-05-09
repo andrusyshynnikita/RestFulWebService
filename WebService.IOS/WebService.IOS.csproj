@@ -91,8 +91,11 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Setup.cs" />
-    <BundleResource Include="Resources\car_967470_640.png" />
     <Compile Include="Views\MainView.cs" />
+    <Compile Include="Views\WeatherForCityView.cs" />
+    <Compile Include="Views\WeatherForCityView.designer.cs">
+      <DependentUpon>WeatherForCityView.cs</DependentUpon>
+    </Compile>
     <None Include="app.config" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>
@@ -108,6 +111,9 @@
     <BundleResource Include="Resources\city.list.json" />
     <InterfaceDefinition Include="Views\Cells\CityViewCell.xib" />
     <BundleResource Include="Resources\City.db" />
+    <InterfaceDefinition Include="Views\WeatherForCityView.xib">
+      <SubType>Designer</SubType>
+    </InterfaceDefinition>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Akavache.Core, Version=6.4.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -215,6 +221,18 @@
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\splash.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\splash.imageset\iTunesArtwork@1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\splash.imageset\iTunesArtwork@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\splash.imageset\iTunesArtwork@3x.png">
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>

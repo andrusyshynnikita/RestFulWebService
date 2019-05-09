@@ -18,11 +18,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="445" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="car_967470_640.png">
-                                <rect key="frame" x="87" y="304" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="445" translatesAutoresizingMaskIntoConstraints="NO" image="splash">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                         </subviews>
+                        <constraints>
+                            <constraint id="748" firstItem="445" firstAttribute="height" secondItem="223" secondAttribute="height"/>
+                            <constraint id="749" firstItem="445" firstAttribute="width" secondItem="223" secondAttribute="width"/>
+                            <constraint id="750" firstItem="445" firstAttribute="centerX" secondItem="223" secondAttribute="centerX"/>
+                            <constraint id="751" firstItem="445" firstAttribute="centerY" secondItem="223" secondAttribute="centerY"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="224" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -30,7 +35,4 @@
             <point key="canvasLocation" x="-200" y="-388"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="car_967470_640.png" width="640" height="336"/>
-    </resources>
 </document>

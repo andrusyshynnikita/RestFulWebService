@@ -16,25 +16,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="420" translatesAutoresizingMaskIntoConstraints="NO">
-                        <rect key="frame" x="5" y="4.5" width="192" height="34.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="5" y="4.5" width="240" height="34.5"/>
+                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldItalicMT" family="Times New Roman" pointSize="30"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="421" translatesAutoresizingMaskIntoConstraints="NO">
-                        <rect key="frame" x="202" y="4.5" width="96" height="34.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="250" y="4.5" width="64" height="34.5"/>
+                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldItalicMT" family="Times New Roman" pointSize="30"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint id="424" firstItem="420" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" multiplier="0.6"/>
+                    <constraint id="424" firstItem="420" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" multiplier="0.75"/>
                     <constraint id="425" firstItem="420" firstAttribute="height" secondItem="YTl-1W-gDM" secondAttribute="height" multiplier="0.8"/>
                     <constraint id="429" firstItem="420" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY"/>
                     <constraint id="430" firstItem="420" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="5"/>
                     <constraint id="433" firstItem="421" firstAttribute="leading" secondItem="420" secondAttribute="trailing" constant="5"/>
-                    <constraint id="434" firstItem="421" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" multiplier="0.3"/>
+                    <constraint id="434" firstItem="421" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" multiplier="0.2"/>
                     <constraint id="435" firstItem="421" firstAttribute="height" secondItem="YTl-1W-gDM" secondAttribute="height" multiplier="0.8"/>
                     <constraint id="436" firstItem="421" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY"/>
                 </constraints>

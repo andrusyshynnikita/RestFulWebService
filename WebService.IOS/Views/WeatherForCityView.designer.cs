@@ -10,8 +10,8 @@ using System.CodeDom.Compiler;
 
 namespace WebService.IOS
 {
-    [Register ("CurrentWeatherView")]
-    partial class CurrentWeatherView
+    [Register ("WeatherForCityView")]
+    partial class WeatherForCityView
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]

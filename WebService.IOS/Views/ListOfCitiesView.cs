@@ -18,7 +18,7 @@ namespace WebService.IOS
 
         public override void ViewDidLoad()
         {
-            var loadmoreHandler = new Action(async() => await ViewModel.LoadMoreCitiesCommand.ExecuteAsync());
+            var loadmoreHandler = new Action(() =>  ViewModel.LoadMoreCitiesCommand.Execute());
 
            base.ViewDidLoad();
 
